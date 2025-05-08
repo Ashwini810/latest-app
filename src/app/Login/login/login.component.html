@@ -1,0 +1,20 @@
+<main>
+    <div>
+        <h1>Login/SignIn Page</h1>
+        <div>
+            <form action="" [formGroup]="loginForm" (ngSubmit)="onsubmit()">
+                <div>
+                    <label for="Name" [ngStyle]="{'padding':true ? '10px':'10px'}">UserName</label>
+                    <input  [ngStyle]="{'margin':true?'10px':'10px'}" formControlName="userName" type="text" id="Name"name="Name" placeholder="Enter your name"  required>
+                </div>
+                <div>
+                    <label for="Password" [ngStyle]="{'padding':true ? '10px':'10px'}">Password</label>
+                    <input [ngStyle]="{'margin':true?'10px':'10px'}" formControlName="passWord" type="password" id="Password" name="Password" placeholder="Enter your password" required>
+                </div>
+                <div>
+                    <button [disabled]="!loginForm.valid" ngClass="loginForm.valid ? 'submitButton':'disabledButton' ">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
