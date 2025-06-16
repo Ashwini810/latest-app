@@ -627,13 +627,21 @@
 						"method": "PATCH",
 						"header": [],
 						"body": {
-							"mode": "raw",
-							"raw": "{\r\n\"password\":\"12345677\",\r\n\"email\":\"ashu@gmail.com\"\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "aylss@example.com",
+									"type": "text",
+									"uuid": "308c6324-1492-4946-ba05-36577afe2372"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"uuid": "52983011-bcef-4b80-ae36-a63889106bcd",
+									"src": "/C:/Users/AshwiniMalleshappa/OneDrive - IBM/Desktop/MERN-Course/Node-Cource-Resource/complete-node-bootcamp/4-natours/after-section-13/public/img/users/user-5c8a1f292f8fb814b56fa184-1557847261269.jpeg"
 								}
-							}
+							]
 						},
 						"url": {
 							"raw": "{{URL}}api/v1/users/updateMe",
