@@ -1,0 +1,1213 @@
+{
+	"info": {
+		"_postman_id": "45634750-3842c956-1cc6-428c-81e5-09b08efc44cf",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Tours",
+			"item": [
+				{
+					"name": "GetAllTours",
+					"id": "45634750-e77d08bb-3c09-47fa-b3f8-c4602de3b741",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/tours",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"tours"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateTour",
+					"id": "45634750-809b4242-ed43-4a60-b5e6-833e12947167",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n                \"ratingsAverage\": 4.7,\r\n                \"ratingsQuanity\": 0,\r\n                \"images\": [\r\n                    \"tour-5-1.jpg\",\r\n                    \"tour-5-2.jpg\",\r\n                    \"tour-5-3.jpg\"\r\n                ],\r\n                \"name\": \"The Park Mysore\",\r\n                \"duration\": 10,\r\n                \"maxGroupSize\": 15,\r\n                \"difficulty\": \"medium\",\r\n                \"price\": 1497,\r\n                \"summary\": \"Breathing in Nature in America's most spectacular National Parks\",\r\n                \"description\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!\",\r\n                \"imageCover\": \"tour-5-cover.jpg\"\r\n            }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/tours",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"tours"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sorting of tours",
+					"id": "45634750-51721c1c-0082-4334-9a4a-f7a218f68361",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/tours?sort=price,duration",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"tours"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "price,duration"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FilterTours?fields=price,duration",
+					"id": "45634750-bb52d8f2-6365-4e64-bb62-17b97d47731c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/tours?fields=price,duration",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"tours"
+							],
+							"query": [
+								{
+									"key": "fields",
+									"value": "price,duration"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateTour",
+					"id": "45634750-6c239106-546a-4545-a93b-5c725ee7cbf8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"duration\":\"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/tours/5c88fa8cf4afda39709c2961",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"tours",
+								"5c88fa8cf4afda39709c2961"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deteleTour",
+					"id": "45634750-d2188e7b-e0ab-405e-85a1-0d4985528753",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/tours/684bdad927690857bc2ea9da",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"tours",
+								"684bdad927690857bc2ea9da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Paggination",
+					"id": "45634750-2ec7abc1-45d2-4901-8bd1-95d85713f948",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/tours?page=1&limit=7",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"tours"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "top-5-tours",
+					"id": "45634750-9a00b828-6912-48e7-8fa5-3e75aa48699f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/tours/top-5-tours",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"tours",
+								"top-5-tours"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter",
+					"id": "45634750-9e1bbf69-0c71-43e3-bd4a-dfdeef60a284",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/tours?_id=5c88fa8cf4afda39709c2955",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"tours"
+							],
+							"query": [
+								{
+									"key": "_id",
+									"value": "5c88fa8cf4afda39709c2955"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aggregation of tour stats",
+					"id": "45634750-18ed8fc1-89f6-4df6-8b79-84c3a3798b6b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"name\": \"The Northern Lights\",\r\n    \"duration\": 3,\r\n    \"maxGroupSize\": 12,\r\n    \"difficulty\": \"easy\",\r\n    \"ratingsAverage\": 4.9,\r\n    \"ratingsQuantity\": 33,\r\n    \"price\": 1497,\r\n    \"summary\": \"Enjoy the Northern Lights in one of the best places in the world\",\r\n    \"description\": \"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!\\nDolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipisicing elit!\",\r\n    \"imageCover\": \"tour-9-cover.jpg\",\r\n    \"images\": [\"tour-9-1.jpg\", \"tour-9-2.jpg\", \"tour-9-3.jpg\"],\r\n    \"startDates\": [\"2021-12-16,10:00\", \"2022-01-16,10:00\", \"2022-12-12,10:00\"]\r\n  }"
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/tours/tours-stats",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"tours",
+								"tours-stats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tour with Radius",
+					"id": "45634750-148016dd-59b4-4919-8d21-5ae742ba51dc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/tours/tour-distance/200/center/34.111745,-118.113/unit/mi",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"tours",
+								"tour-distance",
+								"200",
+								"center",
+								"34.111745,-118.113",
+								"unit",
+								"mi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTourDistances",
+					"id": "45634750-e9f750ae-8342-4276-ae21-d7bc91da65f7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/tours/distances/34.111745,-118.113/unit/mi",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"tours",
+								"distances",
+								"34.111745,-118.113",
+								"unit",
+								"mi"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "45634750-62a42730-8692-416a-bf6d-072a3388465f"
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "GetAllUsers",
+					"id": "45634750-d5c88e2d-92b0-45e0-981a-8af5626f2818",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUser",
+					"id": "45634750-e8ac7359-c670-4472-86f7-0e982d62398c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"admin1\",\r\n    \"email\":\"admin1@gmail.com\",\r\n    \"password\":\"12345678\",\r\n    \"confirmPassword\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"id": "45634750-70a34902-e254-40ca-aacc-8cc579548732",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ashwini\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/5c8a245f2f8fb814b56fa191",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								"5c8a245f2f8fb814b56fa191"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"id": "45634750-0d3ba19a-eeec-4dfb-a2a9-3bbb172faba4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/users/5c8a245f2f8fb814b56fa191",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								"5c8a245f2f8fb814b56fa191"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUserDeatils",
+					"id": "45634750-1d6b6fbb-270d-4c67-b1e9-78135f362917",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"password\":\"12345677\",\r\n\"email\":\"ashu@gmail.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/updateMe",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								"updateMe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateMe",
+					"id": "45634750-442edc35-0edf-4441-8b25-219e0fab5f9a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"password\":\"12345677\",\r\n\"email\":\"ashu@gmail.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/updateMe",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								"updateMe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteMe",
+					"id": "45634750-d1058d57-a124-4572-a4ef-2c273b52f6f6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"passWord\":\"12345677\",\r\n\"email\":\"ashu@gmail.com\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/deleteMe",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								"deleteMe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMe",
+					"id": "45634750-7ea13ade-3aea-4c46-960d-7a880b506942",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "javascript"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/getMe",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								"getMe"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "45634750-934f4206-383e-41b6-98f8-f265474ca4ca"
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d81e7ec7-287d-440e-a932-38fda2f02d80",
+								"exec": [
+									"pm.environment.set('jwt',pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "45634750-e89c7f39-8993-4e25-a559-8994ecb9a083",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n\"email\":\r\n\"ayls@example.com\",\r\n    \"password\": \"{{password}}\" // password is same for all the users\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/login",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d87e2069-80ef-4361-bcf5-d9590593594a",
+								"exec": [
+									"pm.environment.set('jwt',pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "45634750-6f494ab9-1000-44b4-86b8-da9dabf55b98",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"Ashwini@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"confirmPassword\": \"12345678\",\r\n    \"name\": \"Ashwini\",\r\n    \"role\":\"user\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/signup",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgotpassword",
+					"id": "45634750-17efa4ca-b77d-4ad2-9e4a-9f23ab284fe8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\":\r\n\"ashu@gmail.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/forgotpassword",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								"forgotpassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ResetPassword",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "20e20f2f-4b75-4dff-9a7b-b3d6a0845526",
+								"exec": [
+									"pm.environment.set('jwt',pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "45634750-0c052ea6-e071-4898-bbb0-789f0fb1b3a0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"ashuMallesh\",\r\n    \"confirmPassword\":\"ashuMallesh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/resetpassword/f394138d15264840307aef71b558fb90f66a063503b9305f75f5aa7fa57cd598",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								"resetpassword",
+								"f394138d15264840307aef71b558fb90f66a063503b9305f75f5aa7fa57cd598"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePassword",
+					"id": "45634750-7267bab9-f08d-4bb7-855b-3a5415f98893",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"curentPassword\":\"ashuMallesh\",\r\n     \"password\":\"12345678\",\r\n    \"confirmPassword\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/users/updatepassword",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"users",
+								"updatepassword"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "45634750-4666a075-2d74-4712-879c-db3fd33255da"
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "TourReview",
+					"item": [
+						{
+							"name": "Reviews created from tour",
+							"id": "45634750-3aa1db9a-6d2a-4d33-a26a-37ecdf04c61a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n    \"review\":\"this review is added through tours using mergePrams and mouting reviewRouter\",\r\n    \"rating\":\"5\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/tours/684bdad927690857bc2ea9da/reviews",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"tours",
+										"684bdad927690857bc2ea9da",
+										"reviews"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get tour specific reviews",
+							"id": "45634750-e5c6c89d-8bef-43fa-af18-2eedbbfa6ce7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/tour/684bdad927690857bc2ea9da/reviews",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"tour",
+										"684bdad927690857bc2ea9da",
+										"reviews"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateReview",
+							"id": "45634750-d8a5c6ed-94b6-488d-b56a-69500cba0e30",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rating\":5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/tours/5c88fa8cf4afda39709c2955/reviews/5c8a3b7c14eb5c17645c912f",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"tours",
+										"5c88fa8cf4afda39709c2955",
+										"reviews",
+										"5c8a3b7c14eb5c17645c912f"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteReview",
+							"id": "45634750-696339ad-cd66-471a-8fd0-45ee6891773d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/tours/5c88fa8cf4afda39709c2955/reviews/5c8a3cdc14eb5c17645c913b",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"tours",
+										"5c88fa8cf4afda39709c2955",
+										"reviews",
+										"5c8a3cdc14eb5c17645c913b"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "45634750-35b8268c-6410-48d1-bed3-94a7a84cda76"
+				},
+				{
+					"name": "CreateReview",
+					"id": "45634750-3e9582a5-1de9-474d-8c2a-b6ad19fe7243",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"review\":\"creating new review\",\r\n    \"rating\":\"4\",\r\n    \"tour\":\"684bdad927690857bc2ea9da\",\r\n    \"user\":\"6849ba998ee1fe530c9fe525\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/reviews",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetReviews",
+					"id": "45634750-9dc796db-64c0-492d-ae2c-8c3b48ed5b2d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/reviews",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "45634750-5529a44a-bde1-46ac-b0c8-a5c70a7e7d72"
+		}
+	]
+}
