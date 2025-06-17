@@ -165,13 +165,39 @@
 						"method": "PATCH",
 						"header": [],
 						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"duration\":\"10\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageCover",
+									"type": "file",
+									"uuid": "531613e4-a087-4a6d-8277-1080ce72fc4f",
+									"src": "/C:/Users/AshwiniMalleshappa/OneDrive - IBM/Desktop/MERN-Course/Node-Cource-Resource/complete-node-bootcamp/4-natours/after-section-13/dev-data/img/new-tour-2.jpg"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"uuid": "ad1bae5d-ad48-42cf-bd53-ae3f0f71f106",
+									"src": "/C:/Users/AshwiniMalleshappa/OneDrive - IBM/Desktop/MERN-Course/Node-Cource-Resource/complete-node-bootcamp/4-natours/after-section-13/dev-data/img/new-tour-1.jpg"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"uuid": "594a0f73-50e0-4072-8f81-1e1f275b8bfe",
+									"src": "/C:/Users/AshwiniMalleshappa/OneDrive - IBM/Desktop/MERN-Course/Node-Cource-Resource/complete-node-bootcamp/4-natours/after-section-13/dev-data/img/new-tour-3.jpg"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"uuid": "66dd06c0-63eb-4977-87ca-eefab0b96109",
+									"src": "/C:/Users/AshwiniMalleshappa/OneDrive - IBM/Desktop/MERN-Course/Node-Cource-Resource/complete-node-bootcamp/4-natours/after-section-13/dev-data/img/new-tour-4.jpg"
+								},
+								{
+									"key": "duration",
+									"value": "20",
+									"type": "text",
+									"uuid": "740e7df3-ee57-4dab-b965-327ccb266e22"
 								}
-							}
+							]
 						},
 						"url": {
 							"raw": "{{URL}}api/v1/tours/5c88fa8cf4afda39709c2961",
