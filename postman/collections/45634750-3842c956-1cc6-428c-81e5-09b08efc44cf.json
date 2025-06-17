@@ -631,7 +631,7 @@
 							"formdata": [
 								{
 									"key": "email",
-									"value": "aylss@example.com",
+									"value": "aarav@example.com",
 									"type": "text",
 									"uuid": "308c6324-1492-4946-ba05-36577afe2372"
 								},
@@ -639,7 +639,7 @@
 									"key": "photo",
 									"type": "file",
 									"uuid": "52983011-bcef-4b80-ae36-a63889106bcd",
-									"src": "/C:/Users/AshwiniMalleshappa/OneDrive - IBM/Desktop/MERN-Course/Node-Cource-Resource/complete-node-bootcamp/4-natours/after-section-13/public/img/users/user-5c8a1f292f8fb814b56fa184-1557847261269.jpeg"
+									"src": "/C:/Users/AshwiniMalleshappa/OneDrive - IBM/Desktop/MERN-Course/Node-Cource-Resource/complete-node-bootcamp/4-natours/after-section-13/dev-data/img/aarav.jpg"
 								}
 							]
 						},
@@ -769,7 +769,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \r\n\"email\":\r\n\"ayls@example.com\",\r\n    \"password\": \"{{password}}\" // password is same for all the users\r\n}",
+							"raw": "{\r\n  \r\n\"email\":\r\n\"admin@natours.io\",\r\n    \"password\": \"{{password}}\" // password is same for all the users\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
