@@ -843,7 +843,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"Ashwini@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"confirmPassword\": \"12345678\",\r\n    \"name\": \"Ashwini\",\r\n    \"role\":\"user\"\r\n\r\n}",
+							"raw": "{\r\n    \"email\": \"Ashwini5@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"confirmPassword\": \"12345678\",\r\n    \"name\": \"Ashwini5\",\r\n    \"role\":\"user\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
