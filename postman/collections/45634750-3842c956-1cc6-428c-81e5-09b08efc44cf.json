@@ -1245,7 +1245,46 @@
 		},
 		{
 			"name": "BookingSession",
-			"item": [],
+			"item": [
+				{
+					"name": "{{URL}}api/v1/booking/booking-session/5c88fa8cf4afda39709c2961",
+					"id": "45634750-f4a1ef97-e944-4e2f-b13b-6e3ce1dd11a6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/booking/booking-session/5c88fa8cf4afda39709c2961",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"booking",
+								"booking-session",
+								"5c88fa8cf4afda39709c2961"
+							]
+						}
+					},
+					"response": []
+				}
+			],
 			"id": "45634750-598347d1-94dc-4433-a661-6297a8ac1607"
 		}
 	]
