@@ -657,7 +657,7 @@
 							"formdata": [
 								{
 									"key": "email",
-									"value": "aarav@example.com",
+									"value": "Ashwini@gmail.com",
 									"type": "text",
 									"uuid": "308c6324-1492-4946-ba05-36577afe2372"
 								},
@@ -665,7 +665,7 @@
 									"key": "photo",
 									"type": "file",
 									"uuid": "52983011-bcef-4b80-ae36-a63889106bcd",
-									"src": "/C:/Users/AshwiniMalleshappa/OneDrive - IBM/Desktop/MERN-Course/Node-Cource-Resource/complete-node-bootcamp/4-natours/after-section-13/dev-data/img/aarav.jpg"
+									"src": "postman-cloud:///1f04b597-62a6-4db0-b140-334874f6a7e5"
 								}
 							]
 						},
