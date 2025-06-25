@@ -795,7 +795,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \r\n\"email\":\r\n\"admin@natours.io\",\r\n    \"password\": \"{{password}}\" // password is same for all the users\r\n}",
+							"raw": "{\r\n  \r\n    \"email\": \"Ashwini5@gmail.com\",\r\n    \"password\": \"12345678\" // password is same for all the users\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -803,14 +803,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{URL}}api/v1/users/login",
+							"raw": "{{URL}}api/v1/users/logIn",
 							"host": [
 								"{{URL}}api"
 							],
 							"path": [
 								"v1",
 								"users",
-								"login"
+								"logIn"
 							]
 						}
 					},
@@ -843,7 +843,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"Ashwini5@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"confirmPassword\": \"12345678\",\r\n    \"name\": \"Ashwini5\",\r\n    \"role\":\"user\"\r\n\r\n}",
+							"raw": "{\r\n    \"email\": \"AshwiniMalleshappa6@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"confirmPassword\": \"12345678\",\r\n    \"name\": \"AshwiniMalleshappa6\",\r\n    \"role\":\"user\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -851,14 +851,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{URL}}api/v1/users/signup",
+							"raw": "{{URL}}api/v1/users/signIn",
 							"host": [
 								"{{URL}}api"
 							],
 							"path": [
 								"v1",
 								"users",
-								"signup"
+								"signIn"
 							]
 						}
 					},
